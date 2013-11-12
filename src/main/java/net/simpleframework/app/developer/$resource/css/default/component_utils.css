@@ -1,0 +1,17 @@
+
+.ComponentPage {
+	background: #fff;
+	border: 1px solid #ccc;
+	padding: 10px;
+	margin: 10px 0;
+	text-align: left;
+	width: 85%;
+	-moz-box-shadow: 5px 5px 5px #aaa;
+	-webkit-box-shadow: 5px 5px 5px #aaa;
+	box-shadow: 5px 5px 5px #aaa;
+	min-height: 400px; 
+}
+
+.ComponentPage .text_button input[type=text] {
+	height: 20px;
+}

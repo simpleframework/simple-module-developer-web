@@ -1,0 +1,13 @@
+
+<div class="ComponentPage">
+  <p>定义字典</p>
+  <div style="width: 30%">
+    <input type="text" id="idDictSelectText" class="text_button"
+      onclick="$Actions['dictSelect']('dictName=' + $F('idDictName'));" />
+    <p />
+    <input type="text" id="idDictSelectId" style="height: 20px; width: 100%;" />
+    <p>请输入字典值</p>
+    <input type="text" id="idDictName" style="height: 20px; width: 100%;" value="common.sex" />
+    <p>${page.dictInput(parameter)}</p>
+  </div>
+</div>
