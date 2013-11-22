@@ -9,7 +9,7 @@ public abstract class AbstractComponentPage extends FormTemplatePage {
 	protected void onForward(final PageParameter pp) {
 		super.onForward(pp);
 
-		addHtmlViewVariable(getClass(), "comp");
+		addHtmlViewVariable(pp, getClass(), "comp");
 	}
 
 	@Override
