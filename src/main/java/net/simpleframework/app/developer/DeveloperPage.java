@@ -49,8 +49,8 @@ public class DeveloperPage extends T1ResizedLCTemplatePage {
 	}
 
 	@Override
-	protected void addComponents(final PageParameter pp) {
-		super.addComponents(pp);
+	protected void onForward(final PageParameter pp) {
+		super.onForward(pp);
 
 		addComponentBean(pp, "developerComponentPage", PageIncludeBean.class).setPageUrl(
 				url(DeveloperComponentTabsPage.class)).setContainerId("developer_component_panel");

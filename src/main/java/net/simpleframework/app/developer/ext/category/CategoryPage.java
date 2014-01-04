@@ -12,8 +12,8 @@ import net.simpleframework.mvc.component.ui.tree.TreeNodes;
 public class CategoryPage extends AbstractComponentPage {
 
 	@Override
-	protected void addComponents(final PageParameter pp) {
-		super.addComponents(pp);
+	protected void onForward(final PageParameter pp) {
+		super.onForward(pp);
 
 		addComponentBean(pp, "DemoCategory", CategoryBean.class).setContainerId("id_CategoryPage")
 				.setHandleClass(DemoCategory.class);

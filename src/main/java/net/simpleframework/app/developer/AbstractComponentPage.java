@@ -9,13 +9,8 @@ public abstract class AbstractComponentPage extends FormTemplatePage {
 	protected void onForward(final PageParameter pp) {
 		super.onForward(pp);
 
-		addHtmlViewVariable(pp, getClass(), "comp");
-	}
-
-	@Override
-	protected void addImportCSS(final PageParameter pp) {
-		super.addImportCSS(pp);
-
 		pp.addImportCSS(AbstractComponentPage.class, "/component_utils.css");
+
+		addHtmlViewVariable(pp, getClass(), "comp");
 	}
 }

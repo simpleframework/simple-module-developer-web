@@ -7,8 +7,9 @@ import net.simpleframework.mvc.component.ext.ckeditor.HtmlEditorBean;
 public class HtmlEditorPage extends AbstractComponentPage {
 
 	@Override
-	protected void addComponents(final PageParameter pp) {
-		super.addComponents(pp);
+	protected void onForward(final PageParameter pp) {
+		super.onForward(pp);
+
 		addComponentBean(pp, "HtmlEditorPage_editor", HtmlEditorBean.class).setStartupFocus(false)
 				.setResizeEnabled(true).setContainerId("HtmlEditorPage_editor").setHeight("400px");
 	}

@@ -17,8 +17,8 @@ import net.simpleframework.mvc.component.ui.pager.TablePagerColumn;
 
 public class MemoryTablePage extends AbstractComponentPage {
 	@Override
-	protected void addComponents(final PageParameter pp) {
-		super.addComponents(pp);
+	protected void onForward(final PageParameter pp) {
+		super.onForward(pp);
 
 		final TablePagerBean tablePager = (TablePagerBean) addComponentBean(pp, "DemoMemoryTable",
 				TablePagerBean.class).setShowLineNo(true).setContainerId("id_MemoryTablePage")

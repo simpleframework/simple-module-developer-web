@@ -8,8 +8,8 @@ import net.simpleframework.mvc.common.element.DictMultiSelectInput;
 public class DictSelectPage extends AbstractComponentPage {
 
 	@Override
-	protected void addComponents(final PageParameter pp) {
-		super.addComponents(pp);
+	protected void onForward(final PageParameter pp) {
+		super.onForward(pp);
 
 		//
 		//

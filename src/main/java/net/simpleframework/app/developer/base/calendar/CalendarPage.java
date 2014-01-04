@@ -12,8 +12,8 @@ import net.simpleframework.mvc.component.ui.calendar.CalendarBean;
 public class CalendarPage extends AbstractComponentPage {
 
 	@Override
-	protected void addComponents(final PageParameter pp) {
-		super.addComponents(pp);
+	protected void onForward(final PageParameter pp) {
+		super.onForward(pp);
 
 		addComponentBean(pp, "testCalendar", CalendarBean.class);
 
