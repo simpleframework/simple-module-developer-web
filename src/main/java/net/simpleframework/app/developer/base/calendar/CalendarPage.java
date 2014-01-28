@@ -7,7 +7,6 @@ import net.simpleframework.mvc.common.element.ElementList;
 import net.simpleframework.mvc.common.element.ParagraphElement;
 import net.simpleframework.mvc.component.base.validation.EValidatorMethod;
 import net.simpleframework.mvc.component.base.validation.Validator;
-import net.simpleframework.mvc.component.ui.calendar.CalendarBean;
 
 public class CalendarPage extends AbstractComponentPage {
 
@@ -15,7 +14,7 @@ public class CalendarPage extends AbstractComponentPage {
 	protected void onForward(final PageParameter pp) {
 		super.onForward(pp);
 
-		addComponentBean(pp, "testCalendar", CalendarBean.class);
+		addCalendarBean(pp, "testCalendar");
 
 		addValidationBean(pp, "CalendarPage_validation").setTriggerSelector(
 				".ComponentPage input[type=button]").addValidators(
