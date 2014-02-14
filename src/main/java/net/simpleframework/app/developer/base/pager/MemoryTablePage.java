@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.UUID;
 
 import net.simpleframework.ado.query.IDataQuery;
-import net.simpleframework.ado.query.ListDataObjectQuery;
+import net.simpleframework.ado.query.ListDataQuery;
 import net.simpleframework.app.developer.AbstractComponentPage;
 import net.simpleframework.common.coll.ParameterMap;
 import net.simpleframework.mvc.PageParameter;
@@ -42,7 +42,7 @@ public class MemoryTablePage extends AbstractComponentPage {
 				row.put("col3", "col3_" + UUID.randomUUID().toString());
 				data.add(row);
 			}
-			return new ListDataObjectQuery<Map<?, ?>>(data);
+			return new ListDataQuery<Map<?, ?>>(data);
 		}
 
 		@Override
