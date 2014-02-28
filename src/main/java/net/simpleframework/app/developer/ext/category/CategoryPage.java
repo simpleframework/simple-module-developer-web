@@ -16,7 +16,7 @@ public class CategoryPage extends AbstractComponentPage {
 		super.onForward(pp);
 
 		addComponentBean(pp, "DemoCategory", CategoryBean.class).setContainerId("id_CategoryPage")
-				.setHandleClass(DemoCategory.class);
+				.setHandlerClass(DemoCategory.class);
 	}
 
 	public static class DemoCategory extends DefaultCategoryHandler {
