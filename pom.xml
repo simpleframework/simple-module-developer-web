@@ -6,7 +6,7 @@
   <artifactId>simple-module-developer-web</artifactId>
   <packaging>jar</packaging>
   <version>4.0-SNAPSHOT</version>
-  <url>https://simpleframework.net</url>
+  <url>http://simpleframework.net</url>
   
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
