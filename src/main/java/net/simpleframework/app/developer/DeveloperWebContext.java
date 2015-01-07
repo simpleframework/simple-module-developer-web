@@ -19,6 +19,6 @@ public class DeveloperWebContext extends AbstractModuleContext implements IDevel
 		return ModuleFunctions.of(FUNC_DEVELOPER);
 	}
 
-	public static final ModuleFunction FUNC_DEVELOPER = new WebModuleFunction(DeveloperPage.class)
+	public final ModuleFunction FUNC_DEVELOPER = new WebModuleFunction(this, DeveloperPage.class)
 			.setName(MODULE_NAME + "-DeveloperPage").setText("开发者");
 }
