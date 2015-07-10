@@ -11,7 +11,7 @@ import net.simpleframework.mvc.component.base.validation.Validator;
 public class CalendarPage extends AbstractComponentPage {
 
 	@Override
-	protected void onForward(final PageParameter pp) {
+	protected void onForward(final PageParameter pp) throws Exception {
 		super.onForward(pp);
 
 		addCalendarBean(pp, "testCalendar");

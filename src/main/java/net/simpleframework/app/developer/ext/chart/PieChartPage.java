@@ -12,7 +12,7 @@ import net.simpleframework.mvc.component.ext.highchart.HighchartBean;
 public class PieChartPage extends AbstractChartPage {
 
 	@Override
-	protected void onForward(final PageParameter pp) {
+	protected void onForward(final PageParameter pp) throws Exception {
 		super.onForward(pp);
 
 		final HighchartBean hc = addHighchart(pp);

@@ -49,7 +49,7 @@ public class DeveloperPage extends T1ResizedLCTemplatePage {
 	}
 
 	@Override
-	protected void onForward(final PageParameter pp) {
+	protected void onForward(final PageParameter pp) throws Exception {
 		super.onForward(pp);
 
 		addComponentBean(pp, "developerComponentPage", PageIncludeBean.class).setPageUrl(

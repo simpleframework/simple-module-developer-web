@@ -6,7 +6,7 @@ import net.simpleframework.mvc.template.lets.FormTemplatePage;
 public abstract class AbstractComponentPage extends FormTemplatePage {
 
 	@Override
-	protected void onForward(final PageParameter pp) {
+	protected void onForward(final PageParameter pp) throws Exception {
 		super.onForward(pp);
 
 		pp.addImportCSS(AbstractComponentPage.class, "/component_utils.css");

@@ -12,7 +12,7 @@ import net.simpleframework.mvc.component.ui.tree.TreeNodes;
 public class CategoryPage extends AbstractComponentPage {
 
 	@Override
-	protected void onForward(final PageParameter pp) {
+	protected void onForward(final PageParameter pp) throws Exception {
 		super.onForward(pp);
 
 		addComponentBean(pp, "DemoCategory", CategoryBean.class).setContainerId("id_CategoryPage")

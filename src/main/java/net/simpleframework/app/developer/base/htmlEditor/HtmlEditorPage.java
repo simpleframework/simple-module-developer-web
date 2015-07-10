@@ -7,7 +7,7 @@ import net.simpleframework.mvc.component.ext.ckeditor.HtmlEditorBean;
 public class HtmlEditorPage extends AbstractComponentPage {
 
 	@Override
-	protected void onForward(final PageParameter pp) {
+	protected void onForward(final PageParameter pp) throws Exception {
 		super.onForward(pp);
 
 		addComponentBean(pp, "HtmlEditorPage_editor", HtmlEditorBean.class).setStartupFocus(false)

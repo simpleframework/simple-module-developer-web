@@ -13,7 +13,7 @@ public class DeveloperComponentTabsPage extends TabsTemplatePage {
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public IForward forward(final PageParameter pp) {
+	public IForward forward(final PageParameter pp) throws Exception {
 		final PageTreeItem item = DeveloperPage.getTreeItem(pp.getParameter("t"));
 		if (item != null && item.pageClass != null) {
 			final TabItems tabItems = TabItems.of();
