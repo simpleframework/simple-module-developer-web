@@ -23,9 +23,8 @@ public class MemoryTablePage extends AbstractComponentPage {
 		final TablePagerBean tablePager = (TablePagerBean) addComponentBean(pp, "DemoMemoryTable",
 				TablePagerBean.class).setShowLineNo(true).setContainerId("id_MemoryTablePage")
 				.setHandlerClass(DemoMemoryTable.class);
-		tablePager
-				.addColumn(new TablePagerColumn("ID").setWidth(100).setTooltip("TablePagerColumn 1"))
-				.addColumn(new TablePagerColumn("col2").setWidth(100).setTooltip("TablePagerColumn 2"))
+		tablePager.addColumn(new TablePagerColumn("ID").setWidth(100))
+				.addColumn(new TablePagerColumn("col2").setWidth(100))
 				.addColumn(new TablePagerColumn("col3"));
 	}
 
