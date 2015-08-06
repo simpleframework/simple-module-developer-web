@@ -16,6 +16,7 @@ import net.simpleframework.common.StringUtils;
 import net.simpleframework.common.coll.KVMap;
 import net.simpleframework.mvc.PageMapping;
 import net.simpleframework.mvc.PageParameter;
+import net.simpleframework.mvc.common.element.JS;
 import net.simpleframework.mvc.common.element.LinkElement;
 import net.simpleframework.mvc.component.ComponentParameter;
 import net.simpleframework.mvc.component.base.include.PageIncludeBean;
@@ -139,8 +140,7 @@ public class DeveloperPage extends T1ResizedLCTemplatePage {
 				final TreeNode node = new TreeNode((TreeBean) cp.componentBean, parent, item);
 				node.setText(item.title);
 				if (item.pageClass != null) {
-					node.setJsClickCallback("$Actions.loc('" + url(DeveloperPage.class) + "?t="
-							+ o.getKey() + "');");
+					node.setJsClickCallback(JS.loc(url(DeveloperPage.class) + "?t=" + o.getKey()));
 				} else {
 					node.setOpened(true);
 				}
