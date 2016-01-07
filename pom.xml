@@ -16,13 +16,11 @@
     <dependency>
       <groupId>net.simpleframework</groupId>
       <artifactId>simple-mvc-template</artifactId>
-      <version>${simple.mvc.template}</version>
     </dependency>
 
     <dependency>
       <groupId>net.simpleframework</groupId>
       <artifactId>simple-module-dict-web</artifactId>
-      <version>${simple.module.dict.web}</version>
       <optional>true</optional>
     </dependency>
 
