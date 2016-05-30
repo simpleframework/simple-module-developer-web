@@ -9,7 +9,7 @@ public class DeveloperWebContext extends AbstractModuleContext implements IDevel
 
 	@Override
 	protected Module createModule() {
-		return new Module().setName(MODULE_NAME).setText("developer").setOrder(34);
+		return super.createModule().setName(MODULE_NAME).setText("developer").setOrder(34);
 	}
 
 	@Override
