@@ -53,11 +53,12 @@ public class DeveloperPage extends T1ResizedLCTemplatePage {
 	protected void onForward(final PageParameter pp) throws Exception {
 		super.onForward(pp);
 
-		addComponentBean(pp, "developerComponentPage", PageIncludeBean.class).setPageUrl(
-				url(DeveloperComponentTabsPage.class)).setContainerId("developer_component_panel");
+		addComponentBean(pp, "developerComponentPage", PageIncludeBean.class)
+				.setPageUrl(url(DeveloperComponentTabsPage.class))
+				.setContainerId("developer_component_panel");
 
-		addComponentBean(pp, TreeBean.class, DemoTree.class).setCookies(false).setContainerId(
-				"developer_navtree");
+		addComponentBean(pp, TreeBean.class, DemoTree.class).setCookies(false)
+				.setContainerId("developer_navtree");
 	}
 
 	@Override
@@ -94,7 +95,8 @@ public class DeveloperPage extends T1ResizedLCTemplatePage {
 			this(null, title);
 		}
 
-		public PageTreeItem(final Class<? extends AbstractComponentPage> pageClass, final String title) {
+		public PageTreeItem(final Class<? extends AbstractComponentPage> pageClass,
+				final String title) {
 			this.pageClass = pageClass;
 			this.title = title;
 		}

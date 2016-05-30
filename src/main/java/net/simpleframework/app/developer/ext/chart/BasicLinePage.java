@@ -32,18 +32,17 @@ public class BasicLinePage extends AbstractChartPage {
 		hc.setLegend(new HcLegend().setLayout(ELayout.vertical).setBorderWidth(0)
 				.setAlign(ETextAlign.right).setVerticalAlign(EVerticalAlign.top));
 
-		final HcXAxis xAxis = new HcXAxis().setCategories(new String[] { "一月", "二月", "三月", "四月",
-				"五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月" });
+		final HcXAxis xAxis = new HcXAxis().setCategories(new String[] { "一月", "二月", "三月", "四月", "五月",
+				"六月", "七月", "八月", "九月", "十月", "十一月", "十二月" });
 		hc.setxAxis(xAxis.setLabels(new HcLabels().setRotation(315)));
 		hc.setyAxis(new HcYAxis().setTitle("Temperature (°C)").setTickInterval(2));
 
 		final HcPlotOptions opt = new HcPlotOptions();
 		hc.setPlotOptions(opt);
 
-		opt.setSeries(new HcOptSeries()
-				.setCursor("pointer")
-				.setMarker(new HcOptMarker().setRadius(6))
-				.setPoint_onClick("function() { alert('Category: '+ this.name +', value: '+ this.y); }"));
+		opt.setSeries(new HcOptSeries().setCursor("pointer").setMarker(new HcOptMarker().setRadius(6))
+				.setPoint_onClick(
+						"function() { alert('Category: '+ this.name +', value: '+ this.y); }"));
 		//
 		// hc.addSeries(new HcOptSeries(hc).setName("Tokyo").addData(7.0, 6.9,
 		// 9.5,

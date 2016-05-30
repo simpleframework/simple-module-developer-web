@@ -16,9 +16,9 @@ public class CalendarPage extends AbstractComponentPage {
 
 		addCalendarBean(pp, "testCalendar");
 
-		addValidationBean(pp, "CalendarPage_validation").setTriggerSelector(
-				".ComponentPage input[type=button]").addValidators(
-				new Validator(EValidatorMethod.date_less_than, "#idCalendarField")
+		addValidationBean(pp, "CalendarPage_validation")
+				.setTriggerSelector(".ComponentPage input[type=button]")
+				.addValidators(new Validator(EValidatorMethod.date_less_than, "#idCalendarField")
 						.setArgs("#idCalendarField2, yyyy/MM/dd"));
 	}
 
@@ -26,8 +26,8 @@ public class CalendarPage extends AbstractComponentPage {
 		return ElementList.of(
 				new CalendarInput("idCalendarField").setCalendarComponent("testCalendar")
 						.setDateFormat("yyyy/MM/dd"),
-				new ParagraphElement(),
-				new CalendarInput("idCalendarField2").setCalendarComponent("testCalendar")
-						.setDateFormat("yyyy/MM/dd")).toString();
+				new ParagraphElement(), new CalendarInput("idCalendarField2")
+						.setCalendarComponent("testCalendar").setDateFormat("yyyy/MM/dd"))
+				.toString();
 	}
 }

@@ -22,15 +22,13 @@ public abstract class AbstractChartPage extends AbstractComponentPage {
 			final String currentVariable) throws IOException {
 		final StringBuilder sb = new StringBuilder();
 		final String t = pp.getParameter("t");
-		final InputElement iEle = InputElement
-				.select()
+		final InputElement iEle = InputElement.select()
 				.setOnchange("$Actions.loc('" + url(DeveloperPage.class) + "?t=' + $F(this));")
 				.addElements(new Option("chart_BasicLine", "Basic line"))
 				.addElements(
 						new Option("chart_PieChart", "Pie chart").setSelected("chart_PieChart".equals(t)))
-				.addElements(
-						new Option("chart_BasicColumn", "Basic column").setSelected("chart_BasicColumn"
-								.equals(t)));
+				.addElements(new Option("chart_BasicColumn", "Basic column")
+						.setSelected("chart_BasicColumn".equals(t)));
 		sb.append(iEle);
 		sb.append("<div id='idAbstractChartPage_chart'></div>");
 		return sb.toString();

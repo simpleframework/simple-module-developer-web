@@ -28,14 +28,10 @@ public class BasicColumnPage extends AbstractChartPage {
 		opt.setColumn(new HcOptColumn().setBorderWidth(3).setDataLabels(dataLabels));
 		hc.setPlotOptions(opt);
 
-		hc.setTooltip(new HcTooltip()
-				.setShared(true)
-				.setUseHTML(true)
-				.setValueDecimals(2)
+		hc.setTooltip(new HcTooltip().setShared(true).setUseHTML(true).setValueDecimals(2)
 				.setHeaderFormat("<span style='font-size:10px'>{point.key}</span><table>")
-				.setPointFormat(
-						"<tr><td style='color:{series.color}; padding:0'>{series.name}: </td>"
-								+ "<td style='padding:0'><b>{point.y} mm</b></td></tr>")
+				.setPointFormat("<tr><td style='color:{series.color}; padding:0'>{series.name}: </td>"
+						+ "<td style='padding:0'><b>{point.y} mm</b></td></tr>")
 				.setFooterFormat("</table>"));
 
 		hc.setxAxis(new HcXAxis().setCategories(new String[] { "Jan", "Feb", "Mar", "Apr", "May",

@@ -21,20 +21,15 @@ public class DeveloperComponentTabsPage extends TabsTemplatePage {
 			addAjaxRequest(pp, "ajax_demo", item.pageClass);
 			tabItems.append(new TabItem().setTitle("演示").setContentRef("ajax_demo"));
 			try {
-				addAjaxRequest(
-						pp,
-						"ajax_demo_doc",
-						(Class<? extends AbstractComponentPage>) ClassUtils.forName(item.pageClass
-								.getName() + "_Doc"));
+				addAjaxRequest(pp, "ajax_demo_doc", (Class<? extends AbstractComponentPage>) ClassUtils
+						.forName(item.pageClass.getName() + "_Doc"));
 				tabItems.append(new TabItem().setTitle("文档").setContentRef("ajax_demo_doc"));
 			} catch (final ClassNotFoundException e) {
 			}
 			try {
-				addAjaxRequest(
-						pp,
-						"ajax_demo_source",
-						(Class<? extends AbstractComponentPage>) ClassUtils.forName(item.pageClass
-								.getName() + "_Source"));
+				addAjaxRequest(pp, "ajax_demo_source",
+						(Class<? extends AbstractComponentPage>) ClassUtils
+								.forName(item.pageClass.getName() + "_Source"));
 				tabItems.append(new TabItem().setTitle("代码").setContentRef("ajax_demo_source"));
 			} catch (final ClassNotFoundException e) {
 			}

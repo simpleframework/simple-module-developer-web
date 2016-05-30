@@ -9,12 +9,12 @@ public class DeveloperWebContext extends AbstractModuleContext implements IDevel
 
 	@Override
 	protected Module createModule() {
-		return new Module().setName(MODULE_NAME).setText("developer").setOrder(34);
+		return super.createModule().setName(MODULE_NAME).setText("developer").setOrder(34);
 	}
 
 	@Override
 	protected ModuleFunctions getFunctions() {
-		return ModuleFunctions.of(new WebModuleFunction(this, DeveloperPage.class).setName(
-				MODULE_NAME + "-DeveloperPage").setText("开发者"));
+		return ModuleFunctions.of(new WebModuleFunction(this, DeveloperPage.class)
+				.setName(MODULE_NAME + "-DeveloperPage").setText("开发者"));
 	}
 }
