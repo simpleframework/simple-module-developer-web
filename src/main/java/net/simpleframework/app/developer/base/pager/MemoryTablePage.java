@@ -33,7 +33,7 @@ public class MemoryTablePage extends AbstractComponentPage {
 
 		@Override
 		public IDataQuery<?> createDataObjectQuery(final ComponentParameter cp) {
-			data = new ArrayList<Map<?, ?>>();
+			data = new ArrayList<>();
 			for (int i = 0; i < 1000; i++) {
 				final ParameterMap row = new ParameterMap();
 				row.put("ID", "col1_" + i);
@@ -41,7 +41,7 @@ public class MemoryTablePage extends AbstractComponentPage {
 				row.put("col3", "col3_" + UUID.randomUUID().toString());
 				data.add(row);
 			}
-			return new ListDataQuery<Map<?, ?>>(data);
+			return new ListDataQuery<>(data);
 		}
 
 		@Override
